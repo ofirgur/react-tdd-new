@@ -10,7 +10,7 @@ const balance = (state = 0, action) => {
             return state - action.withdrawal;
         default:
             return state;
-    };
+    }
 };
 
-export default balance;
+export default balance;  
