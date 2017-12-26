@@ -39,13 +39,25 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => {
-    return bindActionCreators(
-        { 
-            deposit, 
-            withdraw 
-        }, 
-        dispatch
-    );
+    return {
+        deposit: payload => {
+            dispatch(deposit(payload));
+        },
+        withdraw: payload => {
+            dispatch(withdraw(payload));
+        }
+    };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+// const mapDispatchToProps = dispatch => {
+//     return bindActionCreators(
+//         { 
+//             deposit, 
+//             withdraw 
+//         }, 
+//         dispatch
+//     );
+// };
+
+//export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+export default connect(state => { return { balance: state } }, { deposit, withdraw })(Wallet);
