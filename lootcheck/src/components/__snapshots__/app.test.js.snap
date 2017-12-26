@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": Array [
         <h2>
           Loot Check
-        </h2>,
+</h2>,
         <hr />,
         <Connect(Wallet) />,
       ],
@@ -68,7 +68,7 @@ ShallowWrapper {
         "children": Array [
           <h2>
             Loot Check
-          </h2>,
+</h2>,
           <hr />,
           <Connect(Wallet) />,
         ],
