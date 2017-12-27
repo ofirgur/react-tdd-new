@@ -3,7 +3,7 @@ import { read_cookie, bake_cookie } from 'sfcookies';
 
 const BALANCE_COOKIE = 'BALANCE_COOKIE';
 
-const balance = (state = 0, action) => {
+const balanceReducer = (state = 0, action) => {
     let balance;
 
     switch(action.type) {
@@ -25,4 +25,4 @@ const balance = (state = 0, action) => {
     return balance;
 };
 
-export default balance;  
+export default balanceReducer;  

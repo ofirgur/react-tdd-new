@@ -34,7 +34,7 @@ export class Wallet extends Component {
 
 const mapStateToProps = state => {
     return {
-        balance: state
+        balance: state.balance
     };
 };
 
@@ -60,4 +60,4 @@ const mapDispatchToProps = dispatch => {
 // };
 
 //export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
-export default connect(state => { return { balance: state } }, { deposit, withdraw })(Wallet);
+export default connect(state => { return { balance: state.balance } }, { deposit, withdraw })(Wallet);
